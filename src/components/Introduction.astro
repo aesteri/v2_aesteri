@@ -1,0 +1,64 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+
+import butterfly from '@/assets/butterfly.svg';
+import christine1 from '@/assets/christine1.jpg';
+import hanbok from '@/assets/hanbok.jpg';
+import christine3 from '@/assets/christine3.png';
+import christine4 from '@/assets/christine4.png';
+import star from '@/assets/star.svg';
+import face from '@/assets/face.png';
+
+---
+
+<sl-card class="card-overview">
+    <img
+      slot="image"
+      src={christine1.src}
+      
+      alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+    />
+  
+    <strong>Christine Kim</strong><br />
+    Christine is a Korean American student at the Georgia Institute of Technology.<br />
+    <small>Current SpaceX Intern</small>
+  
+    <div slot="footer">
+        <sl-avatar label="User avatar" image={face.src}></sl-avatar>
+        <div>
+            <sl-animation name="flip" duration="2000" play>
+                <sl-icon src="/favicon.svg"></sl-icon>
+            </sl-animation>
+            <sl-icon-button id="outlink" name="youtube"></sl-icon-button>
+            <sl-icon-button id="outlink" name="github" href="https://github.com/aesteri" target="_blank"></sl-icon-button>
+            <sl-icon-button id="outlink" name="linkedin" href="https://linkedin.com/in/christine-yewonkim" target="_blank"></sl-icon-button>
+            <sl-animation name="flip" duration="2000" play>
+                <sl-icon src="/favicon.svg"></sl-icon>
+            </sl-animation>
+        </div>
+    </div>
+  </sl-card>
+
+  <style>
+    .card-overview {
+      max-width: 250px;
+      font-size: medium;
+      overflow: auto;
+    }
+  
+    .card-overview small {
+      color: var(--sl-color-neutral-500);
+    }
+
+    #outlink::part(base):hover {
+        color: var(--sl-color-orange-300);
+    }
+    
+    .card-overview [slot='footer'] {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+  

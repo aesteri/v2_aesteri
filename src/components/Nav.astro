@@ -1,0 +1,32 @@
+---
+import star from '@/assets/star.svg';
+---
+
+<sl-tab-group>
+    <sl-tab slot="nav" panel="general"><a href="/" class="tab">Christine</a></sl-tab>
+    <sl-tab slot="nav" panel="custom"><a href="/about" class="tab">About</a></sl-tab>
+    <sl-tab slot="nav" panel="custom"><a href="/projects" class="tab">Projects</a></sl-tab>
+    <sl-tab slot="nav" panel="advanced"><a href="/blog" class="tab">Blog</a></sl-tab>
+    
+</sl-tab-group>
+
+<style>
+    sl-tab-group {
+        --indicator-color: var(--sl-color-orange-100); 
+        --track-color: var(--sl-color-orange-100);
+        
+    }
+    sl-tab::part(base)  {
+        color: var(--sl-color-gray-700) ;
+        padding: 20px;
+        font-size: large;
+        font-family: 'Patrick Hand SC', sans-serif;
+    }
+    .tab{
+        text-decoration: none;
+        color: var(--sl-color-gray-700) ;
+        /* transform: scale(1.05); */
+        transition: all 0.3s ease;
+    }
+    
+</style>

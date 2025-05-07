@@ -1,0 +1,130 @@
+---
+import butterfly from '@/assets/butterfly.svg';
+
+---
+
+<div class="timeline-container">
+    <sl-tab-group id="info-container" >
+        <sl-tab slot="nav" panel="general">General</sl-tab>
+        <sl-tab slot="nav" panel="custom">Gilman Program</sl-tab>
+        <sl-tab slot="nav" panel="advanced">FSAE EV</sl-tab>
+        <sl-tab slot="nav" panel="asian">AAPI</sl-tab>
+      
+        <sl-tab-panel name="general">Christine serves as the Data Operations Lead for Hytech Racing and contributes to the software of the car. In 2024, she was the acceleration driver for HyTech Racing at FSAE electric, breaking the North American record for fastest FSAE electric acceleration time with a time of 3.642 seconds(75 meters). She is currently interning at SpaceX. </sl-tab-panel>
+        <sl-tab-panel name="custom">In 2024, Christine was selected by the U.S. Department of State as a U.S. representative to study abroad at South Korea’s number one university, Seoul National University. There she studied AI and Machine Learning.</sl-tab-panel>
+        <sl-tab-panel name="advanced">At the 2024 Formula SAE Electric international competition, HyTech Racing managed to establish themselves as North America’s fastest team. Christine was one of the two acceleration drivers of the competition, breaking the North American record for acceleration. </sl-tab-panel>
+        <sl-tab-panel name="asian">
+            For her efforts to promote Asian American rights in the GA-ATL community, Christine was awarded as a Korean American Chamber of Commerce GA-ATL Scholar, KIA - Korean American Scholar Foundation Scholar, KIA - Korean American Scholar Foundation Scholar , and Korean American Chamber of Commerce GA-ATL Scholar from 2021 - 2023.
+        </sl-tab-panel>
+    </sl-tab-group>
+
+    <div id="academic-container">
+        <sl-details summary="Education">
+            
+            <sl-icon slot="expand-icon" src={butterfly.src}></sl-icon>
+            <sl-icon slot="collapse-icon" src={butterfly.src}></sl-icon>
+            <strong>Georgia Institute of Technology | 2023 - 2027 </strong>
+            <p>Bachelor of Science in Computer Science</p>
+            <ul>
+                <li>Organizations: Girls Who Code, Rewrite The Code, HyTech Racing, Student Competition Center</li>
+                <li>Relevant Coursework: Computer Organizations, Data Structures and Algorithms, Computer Architecture</li>
+                <li>Honors: Benjamin A. Gilman International Scholar, 2024 North American FSAE Acceleration Record</li>
+            </ul>
+
+            <sl-divider></sl-divider>
+
+            <strong>Seoul National University | 2024 - 2024</strong>
+            <p>Bachelor of Science in Computer Science & Engineering</p>
+            <ul>
+                <li>Relevant Coursework: Computer Vision, Computer Modeling, Computer Convergence Applications (Data Mining)</li>
+            </ul>
+        </sl-details>
+    </div>
+
+    <div id="experience-container">
+        <sl-details summary="Experience">
+            
+            <sl-icon slot="expand-icon" src={butterfly.src}></sl-icon>
+            <sl-icon slot="collapse-icon" src={butterfly.src}></sl-icon>
+            <strong style="text-align: center;">Incoming Intern | 2025 </strong>
+            <p>SpaceX</p>
+            <ul>
+                <li>Software & Data Engineering Solutions</li>
+            </ul>
+
+            <sl-divider></sl-divider>
+
+            <strong>Data Acquisitions & Operations Lead | 2024 - Present</strong>
+            <p>HyTech Racing | Georgia Tech's Formula SAE team</p>
+            <ul>
+                <li>Responsible for maintaining and improving upon all processes relating to live telemetry in Python
+                    and Nix as well as data visualization applications using React, Go, and Github CI – leading a team
+                    of 15 software engineers</li>
+            </ul>
+
+            <sl-divider></sl-divider>
+
+            <strong>Software Engineer | 2023 - 2024</strong>
+            <p>HyTech Racing | Georgia Tech's Formula SAE team</p>
+            <ul>
+                <li><strong>Won 1st Place in Acceleration, Skid pad, Autocross (2024 FSAE EV Michigan) — Fastest North American FSAE EV team</strong></li>
+            </ul>
+        </sl-details>
+    </div>
+
+    <div id="experience-container">
+        <sl-details summary="Leadership">
+            
+            <sl-icon slot="expand-icon" src={butterfly.src}></sl-icon>
+            <sl-icon slot="collapse-icon" src={butterfly.src}></sl-icon>
+            <strong style="text-align: center;">Outreach & Social Committee Chair | 2023 - Present </strong>
+            <p>Georgia Tech Student Competition Center</p>
+            <ul>
+                <li>HyTech Racing's representative at the Georgia Tech Student Competition Center</li>
+            </ul>
+
+            <sl-divider></sl-divider>
+
+            <strong>Internal Vice President  | 2019 - 2023</strong>
+            <p>Gwinnett Asian American Student Association | Student-led county-wide organization that promotes Asian culture </p>
+            <ul>
+                <li>administrated executive operations between board members of 19 member schools in the county </li>
+                <li>coordinated joint events between businesses, schools, and organizations for cultural appreciation and to advocate for Asian American rights in the GA-ATL community </li>
+            </ul>
+
+            <sl-divider></sl-divider>
+
+            <strong>Founding Member & Board Member | 2021 - 2023</strong>
+            <p>Asian Student Alliance</p>
+            <ul>
+                <li><strong>Civil Rights organization that promotes leadership within Asian student population  (founded in response to 2021 Asian Hate crimes)</strong></li>
+                <li>facilitated workshops as a student speaker in the 2021 leadership conference about the Atlanta Spa Shootings of 2021 </li>
+                <li>devised workshop content and collaborated with civil activists</li>
+            </ul>
+        </sl-details>
+    </div>
+
+    
+</div>
+
+<style>
+    #academic-container, #experience-container, #info-container  {
+        padding: 15px;
+        font-size: medium;
+    }
+    .timeline-container {
+
+    }
+    sl-tab-group {
+        --indicator-color: var(--sl-color-orange-300); 
+        --track-color: var(--sl-color-orange-100);
+        /* color: var(--sl-color-pink-300) ; */
+        font-size: smaller;
+    }
+    sl-tab::part(base)  {
+        font-family: 'Patrick Hand SC', sans-serif;
+        color: var(--sl-color-gray-700) ;
+
+    }
+
+</style>
