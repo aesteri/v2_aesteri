@@ -31,6 +31,7 @@ const __dirname = path.dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://aesteri.github.io',
   base: '/v2_aesteri/',
   integrations: [react({
     experimentalReactChildren: true,
