@@ -12,7 +12,7 @@ import face from '@/assets/face.png';
 
 ---
 <div>
-<sl-card class="card-overview">
+  <sl-card class="card-overview">
     <img
       slot="image"
       src={christine1.src}
@@ -25,58 +25,55 @@ import face from '@/assets/face.png';
     <small>Current SpaceX Intern</small>
   
     <div slot="footer">
-        <sl-avatar label="User avatar" image={face.src}></sl-avatar>
-        <div>
-          <sl-icon-button id="outlink"name="envelope" href="mailto:christine.yewon.kim@gmail.com" target="_blank"></sl-icon-button>
-
-            <!-- <sl-animation name="flip" duration="2000" play>
-                <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon>
-            </sl-animation> -->
-            <sl-icon-button id="outlink" name="youtube"></sl-icon-button>
-            <sl-icon-button id="outlink" name="github" href="https://github.com/aesteri" target="_blank"></sl-icon-button>
-            <sl-icon-button id="outlink" name="linkedin" href="https://linkedin.com/in/christine-yewonkim" target="_blank"></sl-icon-button>
-            <sl-animation name="flip" duration="2000" play>
-                <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon>
-            </sl-animation>
-        </div>
+      <sl-avatar label="User avatar" image={face.src}></sl-avatar>
+      <div>
+        <sl-icon-button id="outlink"name="envelope" href="mailto:christine.yewon.kim@gmail.com" target="_blank"></sl-icon-button>
+        <!-- <sl-animation name="flip" duration="2000" play>
+            <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon>
+        </sl-animation> -->
+        <sl-icon-button id="outlink" name="youtube"></sl-icon-button>
+        <sl-icon-button id="outlink" name="github" href="https://github.com/aesteri" target="_blank"></sl-icon-button>
+        <sl-icon-button id="outlink" name="linkedin" href="https://linkedin.com/in/christine-yewonkim" target="_blank"></sl-icon-button>
+        <sl-animation name="flip" duration="2000" play>
+            <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon>
+        </sl-animation>
+      </div>
     </div>
   </sl-card>
 </div>
-  <style>
-    .card-overview {
-      max-width: 250px;
-      font-size: medium;
-      overflow: auto;
-    }
-  
-    .card-overview small {
-      color: var(--sl-color-neutral-500);
-    }
 
-    #outlink::part(base):hover {
-        color: var(--sl-color-orange-300);
-  
-    }
-    
-    .card-overview [slot='footer'] {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media screen and (min-width: 767px) {
-      .card-overview {
-        max-width: 250px;
-        font-size: smaller;
-        --padding: 12px;
-      }
-	  }
-    @media screen and (min-width: 1536px) {
-    .card-overview {
-      max-width: 400px;
-      font-size: 1.5rem; /* or 24px, or any other value you like */
-    }
+<style>
+  .card-overview {
+    max-width: 250px;
+    font-size: medium;
+    overflow: auto;
+  }
+  .card-overview small {
+    color: var(--sl-color-neutral-500);
+  }
+  #outlink::part(base):hover {
+      color: var(--sl-color-orange-300);
 
   }
-  </style>
-  
+  .card-overview [slot='footer'] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 767px) {
+    .card-overview {
+      max-width: 250px;
+      font-size: smaller;
+      --padding: 12px;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    .card-overview {
+      max-width: 400px;
+      font-size: 1.5rem; 
+    }
+  }
+</style>
+

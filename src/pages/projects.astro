@@ -4,16 +4,13 @@ import path from 'path';
 import matter from 'gray-matter';
 import Layout from '@/layouts/Layout.astro';
 
-// Get all the project markdown files
 const projectsDirectory = path.resolve('./src/content/projects');
 const files = fs.readdirSync(projectsDirectory);
 
-// Parse the markdown files into an array of projects
 const projects = files.map((file) => {
   const filePath = path.join(projectsDirectory, file);
   const content = fs.readFileSync(filePath, 'utf-8');
   
-  // Use gray-matter to parse front matter
   const { data: { title, description, link, date } } = matter(content);
   const parsedDate = new Date(date);
   return { title, description, link, date: parsedDate };
@@ -23,10 +20,10 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 ---
 <Layout>
-    <div id="project-container">
-        <div id="project-wrapper">
-        <h1>My Projects</h1>
-        <div class="projects-list">
+  <div id="project-container">
+    <div id="project-wrapper">
+      <h1>My Projects</h1>
+      <div class="projects-list">
 
         {projects.map((project) => (
             <sl-card class="card-header">
@@ -40,38 +37,34 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
             <small>{project.date.toLocaleDateString()}</small>
             </sl-card>
         ))}
-        </div>
+
+      </div>
     </div>
-    </div>
+  </div>
 </Layout>
 
 <style>
-    h1 {
-        text-align: center;
-    }
-    #project-container {
-        display:flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-    }
-
-    #project-wrapper {
-        overflow-y: auto;
-        
-        justify-content: center;
-		  align-items: center;
-    }
-  .projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    justify-items: center; /* Horizontally centers the items inside the grid */
+  h1 {
+    text-align: center;
+  }
+  #project-container {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  #project-wrapper {
+    overflow-y: auto;
     justify-content: center;
     align-items: center;
   }
-
-
-
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
   small {
     font-size: 0.9rem;
     color: #777;
@@ -80,33 +73,28 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
     max-width: 300px;
     padding: 10px;
   }
-
   .card-header [slot='header'] {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
   .card-header h3 {
     margin: 0;
   }
-
   .card-header sl-icon-button {
     font-size: var(--sl-font-size-medium);
     color: var(--sl-color-orange-300);
-    
   }
   .card-header sl-icon-button::part(base):hover  {
     color: var(--sl-color-orange-100);
   }
-
   @media screen and (min-width: 1536px) {
     .projects-list{
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
-        .card-header {
-            font-size: 2rem;
-            max-width: 500px;
-        }
+    .card-header {
+        font-size: 2rem;
+        max-width: 500px;
     }
+  }
 </style>

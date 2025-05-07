@@ -1,36 +1,15 @@
-// {
-//   "extends": "astro/tsconfigs/strict",
-//   "include": [
-//     ".astro/types.d.ts",
-//     "**/*"
-//   ],
-//   "exclude": [
-//     "dist"
-//   ],
-//   "compilerOptions": {
-//     "jsx": "react-jsx",
-//     "jsxImportSource": "react",
-//     "composite": true,
-//     "paths": {
-//       "@/*": ["./src/*"],
-//       "@/components/*": ["./src/components/*"],
-//       "@/css/*": ["./src/styles/*"],
-//     },
-//   },
-// }
-
 {
-  "extends": "astro/tsconfigs/strict", // Or your preferred base
+  "extends": "astro/tsconfigs/strict", 
   "compilerOptions": {
     "composite": true,
-    "types": ["node"], // Or "./src" if your aliases are relative to src
+    "types": ["node"], 
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"]
     },
-    // ... other options
-    "jsx": "react-jsx", // Ensure this is set for React
+
+    "jsx": "react-jsx", 
     "jsxImportSource": "react",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true

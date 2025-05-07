@@ -2,47 +2,45 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-    <div id="home-container">
-        <div id="words">
+  <div id="home-container">
+    <div id="words">
          
-        <sl-animation name="bounce" easing="ease-in-out" duration="2000" play>
-            <h1>Hi, I'm Christine.</h1>
-            
-          </sl-animation>
-          <h3>I like to code.</h3>
-          <h4> Check out my blog posts and projects :u</h4>
+      <sl-animation name="bounce" easing="ease-in-out" duration="2000" play>
+          <h1>Hi, I'm Christine.</h1>
+      </sl-animation>
+      <h3>I like to code.</h3>
+      <h4> Check out my blog posts and projects :u</h4>
+      
     </div>
-          <div class="road">
-            <div class="lines"></div>
-            <img class="yellow car" src="https://images.vexels.com/media/users/3/145211/isolated/preview/ca19aa88a716881725fdf3520d251829-yellow-car-illustration-by-vexels.png" alt="">
-            <img class="blue car" src="https://images.vexels.com/media/users/3/145211/isolated/preview/ca19aa88a716881725fdf3520d251829-yellow-car-illustration-by-vexels.png" alt="">
-          </div>
-        </body>
-        
-        </html>
+    <div class="road">
+      <div class="lines"></div>
+      <img class="yellow car" src="https://images.vexels.com/media/users/3/145211/isolated/preview/ca19aa88a716881725fdf3520d251829-yellow-car-illustration-by-vexels.png" alt="">
+      <img class="blue car" src="https://images.vexels.com/media/users/3/145211/isolated/preview/ca19aa88a716881725fdf3520d251829-yellow-car-illustration-by-vexels.png" alt="">
     </div>
+  </div>  
 </Layout>
 
 <style>
+
     /* @import 'https://fonts.googleapis.com/css?family=Bungee+Shade'; */
-    h4 {
-      font-weight: lighter;
-    }
-#words {
+  h4 {
+    font-weight: lighter;
+  }
+  #words {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px;
     font-size: 30px;
-}
-*, *:after, *:before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  }
+  *, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-#home-container {
+  #home-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -52,87 +50,86 @@ import Layout from '../layouts/Layout.astro';
     overflow-y: hidden;
     margin: 0;
 
-}
- .road {
-  position: relative;
-}
-.up {
-  left: 100px;
-  top: 0;
-  opacity: .5;
-  animation-name: wind;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-direction: reverse;
-}
+  }
+  .road {
+    position: relative;
+  }
+  .up {
+    left: 100px;
+    top: 0;
+    opacity: .5;
+    animation-name: wind;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+  }
 
-.down {
-  width: 200px;
-  top: 50px; 
-  animation-name: wind;
-  animation-duration: 40s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-direction: reverse;
-}
+  .down {
+    width: 200px;
+    top: 50px; 
+    animation-name: wind;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+  }
 
 
-.road {
-  height: 30%;
-  background-color: dimgrey;
-  border-top: 10px solid gray;
-  boder-bottom: 10px solid gray;
-  width: 100%;
-}
+  .road {
+    height: 30%;
+    background-color: dimgrey;
+    border-top: 10px solid gray;
+    boder-bottom: 10px solid gray;
+    width: 100%;
+  }
 
-.lines {
-  border: 5px dashed #fff;
-  height: 0px;
-  width: 100%;
-  position: absolute;
-  top: 45%; 
-}
+  .lines {
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%; 
+  }
 
-strong {
-  color: linear-gradient(rgb(180, 180, 180), rgb(156, 156, 156));
-}
+  strong {
+    color: linear-gradient(rgb(180, 180, 180), rgb(156, 156, 156));
+  }
 
-.car {
-  display: block;
-  max-width: 100%;
-  width: 100px;
-  height: auto;
-  position: absolute;
-  left: 0;
-}
+  .car {
+    display: block;
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    left: 0;
+  }
 
-.yellow {
-  top: -10px;
-  animation: drive 4s infinite ease-in-out,
-             jump 0.3s 1.2s ease; 
-}
+  .yellow {
+    top: -10px;
+    animation: drive 4s infinite ease-in-out, jump 0.3s 1.2s ease; 
+  }
 
-.blue {
-  top: 45px;
-  animation-name: drive;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-}
+  .blue {
+    top: 45px;
+    animation-name: drive;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+  }
 
-@keyframes drive {
-  from { transform: translateX(-20vw) }
-  to { transform: translateX(120vw) }
-}
+  @keyframes drive {
+    from { transform: translateX(-20vw) }
+    to { transform: translateX(120vw) }
+  }
 
-@keyframes wind {
-  from { transform: translateX(-20vw) }
-  to { transform: translateX(120vw) }
-}
+  @keyframes wind {
+    from { transform: translateX(-20vw) }
+    to { transform: translateX(120vw) }
+  }
 
-@keyframes jump {
-  0%, 100% { top: 0px }
-  50% { top: -30px; }
-}
+  @keyframes jump {
+    0%, 100% { top: 0px }
+    50% { top: -30px; }
+  }
 </style>

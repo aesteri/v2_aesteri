@@ -101,9 +101,9 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         color: var(--sl-color-orange-100);
     }
     @media screen and (min-width: 1536px) {
-    .posts-list{
-      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    }
+        .posts-list{
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        }
         .card-overview {
             font-size: 2rem;
             max-width: 500px;

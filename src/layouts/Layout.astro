@@ -5,11 +5,10 @@ import butterfly from '@/assets/butterfly.svg';
 
 ---
 <script>
-	// setBasePath to tell Shoelace where to load icons from.
+	// Shoelace imports
+	import '@shoelace-style/shoelace';
 	import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 	setBasePath('/v2_aesteri/shoelace-assets/');
-	// Load all components.
-	import '@shoelace-style/shoelace';
 </script>
 
 <!doctype html>
@@ -31,15 +30,15 @@ import butterfly from '@/assets/butterfly.svg';
 			<slot />
 		</main>
 		<footer>
-			<p><sl-icon src={butterfly.src}></sl-icon> 2025 Christine Kim <sl-icon src={butterfly.src}></sl-icon> </p>
-			
+			<p>
+				<sl-icon src={butterfly.src}></sl-icon> 2025 Christine Kim <sl-icon src={butterfly.src}></sl-icon> 
+			</p>
 		</footer>
 	</body>
 	
 </html>
 
 <style>
-	
 	* {
 		font-family: 'Patrick Hand SC', sans-serif;
 	}
