@@ -20,7 +20,9 @@ import butterfly from '@/assets/butterfly.svg';
 
     <div id="academic-container">
         <sl-details summary="Education">
-            
+            <div id="divider">
+                <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon> <br>
+            </div>
             <sl-icon slot="expand-icon" src={butterfly.src}></sl-icon>
             <sl-icon slot="collapse-icon" src={butterfly.src}></sl-icon>
             <strong>Georgia Institute of Technology | 2023 - 2027 </strong>
@@ -43,7 +45,9 @@ import butterfly from '@/assets/butterfly.svg';
 
     <div id="experience-container">
         <sl-details summary="Experience">
-            
+            <div id="divider">
+                <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon> <br>
+            </div>
             <sl-icon slot="expand-icon" src={butterfly.src}></sl-icon>
             <sl-icon slot="collapse-icon" src={butterfly.src}></sl-icon>
             <strong style="text-align: center;">Incoming Intern | 2025 </strong>
@@ -74,7 +78,9 @@ import butterfly from '@/assets/butterfly.svg';
 
     <div id="experience-container">
         <sl-details summary="Leadership">
-            
+            <div id="divider">
+                <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon> <br>
+            </div>
             <sl-icon slot="expand-icon" src={butterfly.src}></sl-icon>
             <sl-icon slot="collapse-icon" src={butterfly.src}></sl-icon>
             <strong style="text-align: center;">Outreach & Social Committee Chair | 2023 - Present </strong>
@@ -102,18 +108,25 @@ import butterfly from '@/assets/butterfly.svg';
                 <li>devised workshop content and collaborated with civil activists</li>
             </ul>
         </sl-details>
+
     </div>
 
     
+      
 </div>
 
 <style>
-    #academic-container, #experience-container, #info-container  {
+    #divider {
+        text-align: center;
+        padding: 5px;
+    }
+    #academic-container, #experience-container, #info-container , #xinfo{
         padding: 15px;
         font-size: medium;
     }
-    .timeline-container {
-
+    #card-basic {
+        width: 100%;
+        text-align: center;
     }
     sl-tab-group {
         --indicator-color: var(--sl-color-orange-300); 
@@ -126,5 +139,9 @@ import butterfly from '@/assets/butterfly.svg';
         color: var(--sl-color-gray-700) ;
 
     }
-
+    @media screen and (min-width: 1536px) {
+        #academic-container, #experience-container, #info-container , #xinfo, sl-tab-group, sl-tab::part(base){
+        font-size: 1.5rem;
+    }
+  }
 </style>

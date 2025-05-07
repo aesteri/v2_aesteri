@@ -8,7 +8,6 @@ import butterfly from '@/assets/butterfly.svg';
 	// setBasePath to tell Shoelace where to load icons from.
 	import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 	setBasePath('/v2_aesteri/shoelace-assets/');
-  
 	// Load all components.
 	import '@shoelace-style/shoelace';
 </script>
@@ -24,7 +23,7 @@ import butterfly from '@/assets/butterfly.svg';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/v2_aesteri/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Christine's Website</title>
+		<title>Christine's Personal Website</title>
 	</head>
 	<body>
 		<Nav></Nav>
@@ -70,13 +69,17 @@ import butterfly from '@/assets/butterfly.svg';
 
 	footer {
 		text-align: center;
-		padding: 5px;
+		padding: 10px;
 		font-size: large;
 		bottom: 0;
 		width: 100%;
-		
+		background-color: var(--sl-color-gray-100) ;
 		flex-direction: column;
 	}
-	
+	@media screen and (min-width: 1536px) {
+        footer {
+            font-size: 2rem;
+        }
+    }
 </style>
 

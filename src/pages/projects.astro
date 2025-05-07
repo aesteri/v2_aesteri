@@ -60,20 +60,17 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
         overflow-y: auto;
         
         justify-content: center;
-		align-items: center;
+		  align-items: center;
     }
   .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-items: center; /* Horizontally centers the items inside the grid */
-  justify-content: center;
+    justify-content: center;
     align-items: center;
   }
 
-   a {
-    font-size: 1rem;
-    margin-top: 10px;
-  }
+
 
   small {
     font-size: 0.9rem;
@@ -102,4 +99,14 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
   .card-header sl-icon-button::part(base):hover  {
     color: var(--sl-color-orange-100);
   }
+
+  @media screen and (min-width: 1536px) {
+    .projects-list{
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+        .card-header {
+            font-size: 2rem;
+            max-width: 500px;
+        }
+    }
 </style>

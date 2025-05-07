@@ -9,6 +9,11 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         
         <div id="wrapper-blog">
             <h1>My Posts</h1>
+                <div id="flowers">
+                    <sl-icon name="cloud-snow"></sl-icon>
+                    <sl-icon name="cloud-snow"></sl-icon>
+                    <sl-icon name="cloud-snow"></sl-icon>
+                </div>
             <div class="posts-list"></div>
                 <ul>
                     {allPosts.map((post: any) => (
@@ -47,6 +52,9 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         background-color: var(--sl-color-orange-300);
     }
     h1 {
+        text-align: center;
+    }
+    #flowers {
         text-align: center;
     }
      #blog-container {
@@ -99,5 +107,14 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
     }
     .card-overview sl-icon-button::part(base):hover  {
         color: var(--sl-color-orange-100);
+    }
+    @media screen and (min-width: 1536px) {
+    .posts-list{
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+        .card-overview {
+            font-size: 2rem;
+            max-width: 500px;
+        }
     }
   </style>
