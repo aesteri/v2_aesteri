@@ -11,7 +11,7 @@ import star from '@/assets/star.svg';
 import face from '@/assets/face.png';
 
 ---
-
+<div>
 <sl-card class="card-overview">
     <img
       slot="image"
@@ -30,6 +30,7 @@ import face from '@/assets/face.png';
             <sl-animation name="flip" duration="2000" play>
                 <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon>
             </sl-animation>
+            <sl-icon-button id="outlink"name="envelope" href="mailto:christine.yewon.kim@gmail.com" target="_blank"></sl-icon-button>
             <sl-icon-button id="outlink" name="youtube"></sl-icon-button>
             <sl-icon-button id="outlink" name="github" href="https://github.com/aesteri" target="_blank"></sl-icon-button>
             <sl-icon-button id="outlink" name="linkedin" href="https://linkedin.com/in/christine-yewonkim" target="_blank"></sl-icon-button>
@@ -39,7 +40,7 @@ import face from '@/assets/face.png';
         </div>
     </div>
   </sl-card>
-
+</div>
   <style>
     .card-overview {
       max-width: 250px;
@@ -61,6 +62,13 @@ import face from '@/assets/face.png';
       align-items: center;
     }
 
+    @media screen and (min-width: 767px) {
+      .card-overview {
+        max-width: 250px;
+        font-size: smaller;
+        --padding: 10px;
+      }
+	  }
     @media screen and (min-width: 1536px) {
     .card-overview {
       max-width: 400px;

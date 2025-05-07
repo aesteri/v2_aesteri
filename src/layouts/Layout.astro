@@ -33,16 +33,13 @@ import butterfly from '@/assets/butterfly.svg';
 		<footer>
 			<p><sl-icon src={butterfly.src}></sl-icon> 2025 Christine Kim <sl-icon src={butterfly.src}></sl-icon> </p>
 			
-
 		</footer>
 	</body>
 	
 </html>
 
 <style>
-	@media screen and (max-width: 768px) {
-		
-	}
+	
 	* {
 		font-family: 'Patrick Hand SC', sans-serif;
 	}
@@ -70,11 +67,14 @@ import butterfly from '@/assets/butterfly.svg';
 	footer {
 		text-align: center;
 		padding: 10px;
-		font-size: large;
+		display: inline;
 		bottom: 0;
 		width: 100%;
 		background-color: var(--sl-color-gray-100) ;
 		flex-direction: column;
+	}
+	footer p {
+		font-size: large;
 	}
 	@media screen and (min-width: 1536px) {
         footer {
