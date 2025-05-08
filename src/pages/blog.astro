@@ -1,10 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import NoFooter from "@/layouts/NoFooter.astro";
+import { Image } from "astro:assets";
 
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
 
-<Layout>
+<NoFooter>
     <div id="blog-container">
         
         <div id="wrapper-blog">
@@ -13,8 +15,11 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
                 <ul>
                     {allPosts.map((post: any) => (
                         <sl-card class="card-overview">
-                            <img
+                            <Image
                                 slot="image"
+                                width={100}
+                                height={250}
+                                loading={"eager"}
                                 src={post.frontmatter.image.url}
                                 alt={post.frontmatter.image.alt}
                             />
@@ -40,11 +45,11 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
             </div>
         </div>
     </div>
-</Layout>
+</NoFooter>
 
 <style>
     sl-badge::part(base)  {
-        background-color: var(--sl-color-orange-300);
+        background-color: var(--sl-color-orange-400);
     }
     h1 {
         text-align: center;
@@ -54,18 +59,16 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         flex-direction: column;
         height: 100%;
         width: 100%;
+        
     }
     #wrapper-blog {
         overflow-y: auto;
-        
-        justify-content: center;
-		align-items: center;
     }
     .posts-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        justify-items: center; /* Horizontally centers the items inside the grid */
-    justify-content: center;
+        justify-items: center;
+        justify-content: center;
         align-items: center;
     }
 

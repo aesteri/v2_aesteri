@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Layout from '@/layouts/Layout.astro';
-
+import NoFooter from "@/layouts/NoFooter.astro";
 const projectsDirectory = path.resolve('./src/content/projects');
 const files = fs.readdirSync(projectsDirectory);
 
@@ -11,15 +11,15 @@ const projects = files.map((file) => {
   const filePath = path.join(projectsDirectory, file);
   const content = fs.readFileSync(filePath, 'utf-8');
   
-  const { data: { title, description, link, date } } = matter(content);
+  const { data: { title, description, link, date, tags } } = matter(content);
   const parsedDate = new Date(date);
-  return { title, description, link, date: parsedDate };
+  return { title, description, link, date: parsedDate, tags };
 });
 
 projects.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 ---
-<Layout>
+<NoFooter>
   <div id="project-container">
     <div id="project-wrapper">
       <h1>My Projects</h1>
@@ -27,21 +27,26 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
 
         {projects.map((project) => (
             <sl-card class="card-header">
-            <div slot="header">
-                {project.title}
-                <sl-icon-button name="stars" href={project.link} target="_blank" label="Settings"></sl-icon-button>
-            </div>
+              <div slot="header">
+                  {project.title}
+                  <sl-icon-button name="stars" href={project.link} target="_blank" label="Settings"></sl-icon-button>
+              </div>
 
-            {project.description}
-            
-            <small>{project.date.toLocaleDateString()}</small>
+              {project.description}
+              
+              <small>{project.date.toLocaleDateString()}</small>
+              <div slot="footer">
+                  {project.tags.map((tag: any) => (
+                      <sl-badge >{tag}</sl-badge>
+                  ))}
+              </div>
             </sl-card>
         ))}
 
       </div>
     </div>
   </div>
-</Layout>
+</NoFooter>
 
 <style>
   h1 {
@@ -78,6 +83,9 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
     align-items: center;
     justify-content: space-between;
   }
+  sl-badge::part(base)  {
+    background-color: var(--sl-color-orange-400);
+  }
   .card-header h3 {
     margin: 0;
   }
@@ -93,8 +101,8 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
     .card-header {
-        font-size: 2rem;
-        max-width: 500px;
+      font-size: 1.7rem;
+      max-width: 450px;
     }
   }
 </style>

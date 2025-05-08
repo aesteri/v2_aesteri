@@ -1,13 +1,15 @@
 ---
 title: "Personal Website"
-description: "SGO website to host information and portfolio."
-link: ""
+description: "Fast, accessible personal website for blogs and portfolio material"
+link: "https://github.com/aesteri/v2_aesteri"
 date: "2025-05-07"
+tags: [ "Astro", "Shoelace", "HTML", "CSS"]
+
 ---
 
-SGO website to host information and portfolio.
+Designed and deployed a fast, accessible personal website using Astro and the Shoelace UI library, emphasizing a clean and modern user experience
 
 ## Features
-- Feature 1
+- Blog
 - Feature 2
 - Feature 3

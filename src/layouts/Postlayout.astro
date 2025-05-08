@@ -1,10 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 const { frontmatter } = Astro.props;
-
+import NoFooter from "@/layouts/NoFooter.astro";
 ---
 
-<Layout>
+<NoFooter>
     <div id="post-container">
         <div id="post-wrapper">
             <div id="post-content">
@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props;
             </div>
         </div>
     </div>
-</Layout>
+</NoFooter>
 
 <style>
     #post-container {

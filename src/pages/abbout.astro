@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Introduction from '@/components/Introduction.astro';
 import Timeline from '@/components/Timeline.astro';
+import NoFooter from '@/layouts/NoFooter.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<Layout>
+<NoFooter>
 	<div id="home-container">
 		<div class="home-item1">
 			<Introduction></Introduction>
@@ -37,13 +38,14 @@ import Timeline from '@/components/Timeline.astro';
 		</div>	
 	</div>
 	
-</Layout>
+</NoFooter>
 
 <style>
 	#home-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
 		overflow: hidden;
+        padding: 30px;
 	}
 	.home-item1 {
 		position: sticky;
@@ -95,6 +97,7 @@ import Timeline from '@/components/Timeline.astro';
 		}
 		#mobile-home-container {
 			overflow-y: auto;
+            
 			justify-content: center;
 			align-items: center;
 			text-align: center;
