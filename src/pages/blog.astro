@@ -17,9 +17,15 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
                         <sl-card class="card-overview">
                             <Image
                                 slot="image"
-                                width={100}
-                                height={250}
+                                format="avif"
+                                quality={100}
+                                loading="eager"
+                                decoding="async"
                                 loading={"eager"}
+                                sizes="20px"
+                                style={{ width: '200', height: 'auto' }}
+                                densities={[1, 2]}
+                                inferSize={true}
                                 src={post.frontmatter.image.url}
                                 alt={post.frontmatter.image.alt}
                             />
@@ -110,6 +116,9 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         .card-overview {
             font-size: 2rem;
             max-width: 500px;
+        }
+        Image {
+            width: auto;
         }
     }
   </style>
