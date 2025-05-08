@@ -1,26 +1,37 @@
 ---
+import Resume from '@/components/Resume.astro';
 import Layout from '../layouts/Layout.astro';
 import Introduction from '@/components/Introduction.astro';
 import Timeline from '@/components/Timeline.astro';
+import Yap from '@/components/Yap.astro';
+import NoFooter from '@/layouts/NoFooter.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<Layout>
+<NoFooter>
 	<div id="home-container">
-		<div class="home-item1">
-			<Introduction></Introduction>
-		</div>
+        <div id="first">
+            <div class="home-item1">
+                <Introduction></Introduction>
+            </div>
 
-		<div class="home-item2">
-			<div class="scroll-wrapper">
-				<div id="time-wrapper">
-				<Timeline></Timeline>
-				</div>
-			</div>
-		</div>
+            <div class="home-item2">
+                <div class="scroll-wrapper">
+                    <div id="time-wrapper">
 
+                        <Yap></Yap>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="second">
+            <sl-divider style="--color: var(--sl-color-orange-300); "></sl-divider>
+            <Resume></Resume>
+        </div>
 	</div>	
+    
 	<div class="mobile-only">
 		<div id="mobile-home-container">
 			<div class="mobile-home-item1">
@@ -37,14 +48,24 @@ import Timeline from '@/components/Timeline.astro';
 		</div>	
 	</div>
 	
-</Layout>
+</NoFooter>
 
 <style>
 	#home-container {
-		display: grid;
+		display: flex;
+        flex-direction: column;
+        justify-items: center;
+	}
+    #first {
+        display: grid;
 		grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
 		overflow: hidden;
-	}
+        padding: 30px;
+    }
+    #second {
+        width: 50%;
+        padding-bottom: 10px;
+    }
 	.home-item1 {
 		position: sticky;
 		top: 0; /* Required for sticky positioning */
@@ -95,6 +116,7 @@ import Timeline from '@/components/Timeline.astro';
 		}
 		#mobile-home-container {
 			overflow-y: auto;
+            
 			justify-content: center;
 			align-items: center;
 			text-align: center;

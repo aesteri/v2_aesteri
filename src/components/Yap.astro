@@ -1,0 +1,42 @@
+---
+import butterfly from '@/assets/butterfly.svg';
+
+---
+
+<div class="timeline-container">
+    
+    <sl-tab-group id="info-container" >
+        <sl-tab slot="nav" panel="general" label="General tab">General</sl-tab>
+        <sl-tab slot="nav" panel="custom" label="Gilman tab">Gilman Program</sl-tab>
+        <sl-tab slot="nav" panel="advanced" label="FSAE tab">FSAE EV</sl-tab>
+        <sl-tab slot="nav" panel="asian" label="AAPI tab">AAPI</sl-tab>
+      
+        <sl-tab-panel name="general">Christine serves as the Data Operations Lead for Hytech Racing and contributes to the software of the car. In 2024, she was the acceleration driver for HyTech Racing at FSAE electric, breaking the North American record for fastest FSAE electric acceleration time with a time of 3.642 seconds(75 meters). She is currently interning at SpaceX. </sl-tab-panel>
+        <sl-tab-panel name="custom">In 2024, Christine was selected by the U.S. Department of State as a U.S. representative to study abroad at South Korea’s number one university, Seoul National University. There she studied AI and Machine Learning.</sl-tab-panel>
+        <sl-tab-panel name="advanced">At the 2024 Formula SAE Electric international competition, HyTech Racing managed to establish themselves as North America’s fastest team. Christine was one of the two acceleration drivers of the competition, breaking the North American record for acceleration. </sl-tab-panel>
+        <sl-tab-panel name="asian">
+            For her efforts to promote Asian American rights in the GA-ATL community, Christine was awarded as a Korean American Chamber of Commerce GA-ATL Scholar, KIA - Korean American Scholar Foundation Scholar, KIA - Korean American Scholar Foundation Scholar , and Korean American Chamber of Commerce GA-ATL Scholar from 2021 - 2023.
+        </sl-tab-panel>
+    </sl-tab-group>
+</div>
+
+<style>
+    #info-container{
+        padding: 15px;
+        font-size: medium;
+    }
+    sl-tab-group {
+        --indicator-color: var(--sl-color-orange-300); 
+        --track-color: var(--sl-color-orange-100);
+        font-size: smaller;
+    }
+    sl-tab::part(base)  {
+        font-family: 'Patrick Hand SC', sans-serif;
+        color: var(--sl-color-gray-700) ;
+    }
+    @media screen and (min-width: 1536px) {
+        #info-container , sl-tab-group, sl-tab::part(base){
+            font-size: 1.5rem;
+        }
+    }
+</style>
