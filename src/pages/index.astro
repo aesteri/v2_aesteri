@@ -134,4 +134,14 @@ import yellowcar from '@/assets/yellowcar.png';
     0%, 100% { top: 0px }
     50% { top: -30px; }
   }
+  @media screen and (max-width: 767px) {
+    .yellow {
+      top: -30px;
+      animation: drive 4s infinite ease-in-out, jump 0.3s 1.2s ease; 
+    }
+
+    .blue {
+      top: 10px;
+    }
+  }
 </style>
