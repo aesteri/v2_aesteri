@@ -1,7 +1,7 @@
 ---
 import Nav from "@/components/Nav.astro"
 import "@shoelace-style/shoelace/dist/themes/light.css";
-import butterfly from '@/assets/butterfly.svg';
+import butterfly1 from '@/assets/butterfly1.svg';
 
 ---
 <script>
@@ -31,9 +31,9 @@ import butterfly from '@/assets/butterfly.svg';
 			<slot />
 		</main>
 		<footer>
-			<sl-icon src={butterfly.src}></sl-icon> 
+			<sl-icon id= "small" src={butterfly1.src}></sl-icon> 
 			<sl-icon-button id="outlink"name="envelope" href="mailto:christine.yewon.kim@gmail.com" target="_blank" label="Send me an email"></sl-icon-button>
-			<sl-icon src={butterfly.src}></sl-icon> 
+			<sl-icon id= "small" src={butterfly1.src}></sl-icon> 
 			<p>
 				© 2025 Christine Kim. All Rights Reserved.
 			</p>

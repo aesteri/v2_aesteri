@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Layout from '@/layouts/Layout.astro';
 import NoFooter from "@/layouts/NoFooter.astro";
+import butterfly1 from '@/assets/butterfly1.svg';
 const projectsDirectory = path.resolve('./src/content/projects');
 const files = fs.readdirSync(projectsDirectory);
 
@@ -29,7 +30,9 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
             <sl-card class="card-header">
               <div slot="header">
                   {project.title}
-                  <sl-icon-button name="stars" href={project.link} target="_blank" label="Settings"></sl-icon-button>
+                  <sl-animation name="flip" duration="2000" play>
+                    <sl-icon-button src={butterfly1.src} href={project.link} target="_blank" label="Settings"></sl-icon-button>
+                  </sl-animation>
               </div>
 
               {project.description}
@@ -92,10 +95,6 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
   }
   .card-header sl-icon-button {
     font-size: var(--sl-font-size-medium);
-    color: var(--sl-color-orange-300);
-  }
-  .card-header sl-icon-button::part(base):hover  {
-    color: var(--sl-color-orange-100);
   }
   @media screen and (min-width: 1536px) {
     .projects-list{
