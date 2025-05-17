@@ -9,11 +9,11 @@ import { Image } from "astro:assets";
     <div id="post-container">
         <div id="post-wrapper">
             <div id="post-content">
-                <sl-icon-button name="arrow-left-short" label="Settings" href="/v2_aesteri/blog"></sl-icon-button>
+                <sl-icon-button name="arrow-left-short" label="Settings" href="/blog"></sl-icon-button>
 
                 <div id = "header-post">
                     <h1>{frontmatter.title}</h1>
-                    <sl-icon src="/v2_aesteri/favicon.svg"></sl-icon>
+                    <sl-icon src="/favicon.svg"></sl-icon>
                     <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
                     <p><em>{frontmatter.description}</em></p>
                     <p>Written by: {frontmatter.author}</p>

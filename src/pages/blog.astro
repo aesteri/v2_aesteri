@@ -33,7 +33,7 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
                             <div slot="header">
                                 {post.frontmatter.title}
                                 <sl-animation name="flip" duration="2000" play>
-                                <sl-icon-button src="/v2_aesteri/favicon.svg" label="Settings" href={post.url}></sl-icon-button>
+                                <sl-icon-button src="/favicon.svg" label="Settings" href={post.url}></sl-icon-button>
                                 </sl-animation>
                             </div>
                         
