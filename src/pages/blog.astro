@@ -3,7 +3,8 @@ import Layout from "@/layouts/Layout.astro";
 import NoFooter from "@/layouts/NoFooter.astro";
 import { Image } from "astro:assets";
 
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
+  .sort((a: any, b: any) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 ---
 
 <NoFooter>
