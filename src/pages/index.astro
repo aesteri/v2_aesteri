@@ -2,17 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import yellowcar from '@/assets/yellowcar.svg';
+import Chatbot from '@/components/Chatbot.astro';
+
 ---
 <Layout>
   <div id="home-container">
     <div id="words">
          
       <sl-animation name="bounce" easing="ease-in-out" duration="2000" play>
-        <h1>Hi, I'm Christine.</h1>
+        <h1>Hi, I'm Christine.</h1> 
       </sl-animation>
       <h3>I like to code.</h3>
       <h4> Check out my blog posts and projects :u</h4>
-      
+      <Chatbot></Chatbot>
     </div>
     <div class="road">
       <div class="lines"></div>
@@ -20,6 +22,7 @@ import yellowcar from '@/assets/yellowcar.svg';
       <Image src={yellowcar} alt="Blue car" class:list={['blue', 'car']} loading={'eager'}/>
     </div>
   </div>  
+  
 </Layout>
 
 <style>

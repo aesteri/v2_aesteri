@@ -1,0 +1,73 @@
+---
+import '@shoelace-style/shoelace/dist/components/dialog/dialog.js';
+import '@shoelace-style/shoelace/dist/components/button/button.js';
+
+const apiUrl = import.meta.env.PUBLIC_API_ENDPOINT;
+---
+
+<sl-button id="open-chatbot-btn">Open BETA Chatbot</sl-button>
+
+<sl-dialog id="chatbot-modal" data-api-url={apiUrl} label=" BETA Chatbot *Disclaimer: information might not be accurate" style="z-index: 9999; --width: 50vw; --sl-color-primary-500: rgb(231, 205, 155); --sl-color-primary-600: rgb(236, 170, 89);">
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="text" id="userInput" placeholder="What do you want to know?" style="width: 100%;" />
+        <sl-button id="fetch-data-btn" variant="primary">Ask</sl-button>
+        <div id="apiResponse" style="margin-top: 1rem; color: #333; min-height: 20px;"></div>
+    </div>
+</sl-dialog>
+
+
+<script>
+    const dialog = document.getElementById('chatbot-modal') as any;
+    const openButton = document.getElementById('open-chatbot-btn');
+    const fetchDataButton = document.getElementById('fetch-data-btn');
+    const inputElement = document.getElementById('userInput') as HTMLInputElement;
+    const responseElement = document.getElementById('apiResponse');
+    const apiEndpoint = dialog.dataset.apiUrl;
+    let apiResponse = '';
+
+    function openModal() {
+        dialog?.show();
+    }
+
+
+    
+    function updateResponse() {
+        if (responseElement) responseElement.textContent = apiResponse;
+    }
+
+    async function fetchData() {
+        const userQuery = inputElement.value.trim();
+        if (!userQuery) {
+            apiResponse = 'Please enter a search term!';
+            updateResponse();
+            return;
+        }
+        
+        const url = `${apiEndpoint}/askChat?query=${encodeURIComponent(userQuery)}`;
+        
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            const data = await response.text();
+            apiResponse = data;
+            updateResponse();
+        } catch (error) {
+            console.error('API Call Failed:', error);
+            apiResponse = 'Sorry, I reached my daily quota limit. Please try again tomorrow.';
+            updateResponse();
+        }
+    }
+
+    // Attach event listeners instead of using onclick attributes
+    openButton?.addEventListener('click', openModal);
+    fetchDataButton?.addEventListener('click', fetchData);
+</script>
+<style>
+  sl-button::part(base):hover, sl-dialog::part(base) {
+    color: orange;
+    border-color: orange;
+  }
+  
+</style>
