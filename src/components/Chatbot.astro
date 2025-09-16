@@ -7,7 +7,7 @@ const apiUrl = import.meta.env.PUBLIC_API_ENDPOINT;
 
 <sl-button id="open-chatbot-btn">Open BETA Chatbot</sl-button>
 
-<sl-dialog id="chatbot-modal" data-api-url={apiUrl} label=" BETA Chatbot *Disclaimer: information might not be accurate" style="z-index: 9999; --width: 50vw; --sl-color-primary-500: rgb(231, 205, 155); --sl-color-primary-600: rgb(236, 170, 89);">
+<sl-dialog id="chatbot-modal" data-api-url={apiUrl} label=" (Not Available Rn due to Free Tier rate limites) BETA Chatbot *Disclaimer: information might not be accurate" style="z-index: 9999; --width: 50vw; --sl-color-primary-500: rgb(231, 205, 155); --sl-color-primary-600: rgb(236, 170, 89);">
     <div style="display: flex; flex-direction: column; gap: 1rem;">
         <input type="text" id="userInput" placeholder="What do you want to know?" style="width: 100%;" />
         <sl-button id="fetch-data-btn" variant="primary">Ask</sl-button>
