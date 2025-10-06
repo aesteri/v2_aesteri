@@ -19,7 +19,7 @@ const apiUrl = import.meta.env.PUBLIC_API_ENDPOINT;
 <script>
     const dialog = document.getElementById('chatbot-modal') as any;
     const openButton = document.getElementById('open-chatbot-btn');
-    const fetchDataButton = document.getElementById('fetch-data-btn');
+    const fetchDataButton = document.getElementById('fetch-data-btn') as any;
     const inputElement = document.getElementById('userInput') as HTMLInputElement;
     const responseElement = document.getElementById('apiResponse');
     const apiEndpoint = dialog.dataset.apiUrl;
@@ -44,7 +44,8 @@ const apiUrl = import.meta.env.PUBLIC_API_ENDPOINT;
         }
         
         const url = `${apiEndpoint}/askChat?query=${encodeURIComponent(userQuery)}`;
-        
+        fetchDataButton.loading = true;
+
         try {
             const response = await fetch(url);
             if (!response.ok) {
@@ -58,6 +59,8 @@ const apiUrl = import.meta.env.PUBLIC_API_ENDPOINT;
             apiResponse = 'Sorry, I reached my daily quota limit. Please try again tomorrow.';
             updateResponse();
         }
+
+        fetchDataButton.loading = false;
     }
 
     // Attach event listeners instead of using onclick attributes
