@@ -29,9 +29,9 @@ I went to my dad for his thoughts. He was busy at the time figuring out the opti
 
 My dad didn't look because he was busy. He did say "it looks fine" though, but he definitely didn't look into it.
 
-I took that answer as a yes though, and there it was: My confirmation to stay at a hostel for a week in Compton, LA. 
+I took that answer as a yes, and there it was: My confirmation to stay at a hostel for a week in Compton, LA. 
 
 During this week, I learned the hard way why a 5'2 petite asian woman/young girl (not even 21 years old at the time) should not book a hostel in Compton LA alone. 
 
-I survived though, and I'm definitely thankful for all the lessons I learned. It was a once in a lifetime experience.
+I survived, and I'm definitely thankful for all the lessons I learned. It was a once in a lifetime experience.
 
