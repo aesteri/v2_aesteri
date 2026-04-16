@@ -49,6 +49,8 @@ Several companies also come to these competitions to recruit which I'll go over 
 
 I also drove for HyTech at competition. I ended up setting a new record when I did. It was fun, but that's it. It was like a bucket list thing. I would definitely advise more girls to try for it if you like racing!
 
+Fun fact: The picture above is actually me in a test session laying down on the ground.
+
 ## Network & Career
 
 Everyone and their mothers at HyTech ended up going to some prestigious tech company. Whether it was Apple, SpaceX, Tesla, or a VC-backed start up, everyone was going somewhere. This expanded my network, and now I know people at different companies who can vouch for my work. 
