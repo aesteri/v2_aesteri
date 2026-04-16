@@ -7,7 +7,7 @@ author: 'Christine'
 image:
     url: 'https://raw.githubusercontent.com/aesteri/v2_aesteri/refs/heads/main/src/assets/LA.jpg'
     alt: 'LA'
-tags: ["internship", "Los Angeles", "Summer"]
+tags: ["internship", "Los Angeles", "Goofy"]
 ---
 # Relocating to LA for the Summer
 
@@ -19,7 +19,7 @@ I booked a week's worth of stay at a shady hostel because I thought I could hand
 
 I never smelled so much weed in my life...
 
-I came into the summer of 2025, never realizing that my start date for my internship was actually a week earlier than I had expected. I only managed to find out a week before (I had this misunderstanding because all of my friends were starting a week later...)
+I came into the summer of 2025, never realizing that my start date for my internship was actually a week earlier than I had expected. I only managed to find out a week before
 
 I knew the right move was booking a hotel, but the LA prices scared me. I searched for cheaper alternatives, and I found a hostel that only cost 23$ a day. What a crazy deal. 
 
