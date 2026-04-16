@@ -19,6 +19,8 @@ Thus, I ended up joining the first competition team I saw, and that was Formula 
 
 As someone who is now considered an "unc" within the team, I write down my personal experience being in a Formula Student Electric team in university.
 
+Definition: Formula Student Electric - an interdisciplinary engineering competition team where students of all majors and grades gather to design a formula-style fully electric vehicle in one year from scratch and compete in design, business, and racing events with other universities (international)
+
 ## Knowledge
 
 To be completely blunt, there was a steep learning curve at HyTech when I first arrived. The leads were just so smart and too occupied with making the car faster that they didn't put much effort into the training modules for freshmen. It was not easy convincing myself to come every workshop night. I even stopped coming for a bit my first semester. 
