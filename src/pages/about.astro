@@ -4,12 +4,14 @@ import Introduction from '@/components/Introduction.astro';
 import Timeline from '@/components/Timeline.astro';
 import Yap from '@/components/Yap.astro';
 import NoFooter from '@/layouts/NoFooter.astro';
+import News from '@/components/News.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 <NoFooter>
 	<div id="home-container">
+		
         <div id="first">
             <div class="home-item1">
                 <Introduction></Introduction>
@@ -25,10 +27,15 @@ import NoFooter from '@/layouts/NoFooter.astro';
                 </div>
             </div>
         </div>
+		
         <div id="second">
             <sl-divider style="--color: var(--sl-color-orange-300); "></sl-divider>
             <Resume></Resume>
+			<sl-divider style="--color: var(--sl-color-orange-300); "></sl-divider>
         </div>
+		<div id="third">
+			<News></News>
+		</div>
 	</div>	
     
 	<div class="mobile-only">
@@ -42,8 +49,12 @@ import NoFooter from '@/layouts/NoFooter.astro';
 					<div id="mobile-time-wrapper">
 						<sl-divider style="--color: var(--sl-color-orange-300); "></sl-divider>
 						<Timeline></Timeline>
+						<sl-divider style="--color: var(--sl-color-orange-300); "></sl-divider>
 					</div>
 				</div>
+			</div>
+			<div id="mobile-home-item2">
+				<News></News>
 			</div>
 		</div>	
 	</div>

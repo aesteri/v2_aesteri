@@ -1,0 +1,80 @@
+---
+import fs from 'fs';
+import path from 'path';
+const newsPath = path.resolve('./src/content/news/news.md');
+const newsContent = fs.readFileSync(newsPath, 'utf-8');
+const newsLines = newsContent.split('\n').filter(line => line.trim() !== '');
+
+const newsMap = newsLines.map((story) => {
+  let text = story.trim();
+  let link = null;
+
+  if (story.includes('[]')) {
+    const parts = story.split('[]');
+    text = parts[0].trim();
+    link = parts[1].trim();
+  }
+  return { text, link };
+}).reverse();
+
+---
+
+<div id="News">
+    <sl-card class="card-header">
+    <div slot="header" >
+        News 🔥
+    </div>
+
+        <div id="news-divider">
+            {newsMap.map((item, index) => (
+                <>
+                    <div class="news-item">
+                        {item.link ? (
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                {item.text}
+                            </a>
+                        ) : (
+                            <span>{item.text}</span>
+                        )}
+                    </div>
+                    
+                    <br/>
+                </>
+            ))}
+        </div>
+    </sl-card>
+
+
+</div>
+
+<style>
+    #News {
+        padding: 30px;
+
+    }
+    #news-divider { 
+        max-height: 100px;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    #news-divider::-webkit-scrollbar {
+        width: 6px;
+    }
+    #news-divider::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    #news-divider::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+    }
+
+    .news-item a {
+        color: #ec9345;
+        text-decoration: none;
+    }
+
+    .news-item a:hover {
+        text-decoration: underline;
+    }
+</style>
