@@ -35,7 +35,9 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
         {projects.map((project) => (
             <sl-card class="card-header">
               <div slot="header">
+                  <a target= "_blank" href={project.link}>
                   {project.title}
+                  </a>
                   <sl-animation name="flip" duration="2000" play>
                     <sl-icon-button src={butterfly1.src} href={project.link} target="_blank" label="Settings"></sl-icon-button>
                   </sl-animation>
@@ -110,5 +112,14 @@ projects.sort((a, b) => b.date.getTime() - a.date.getTime());
       font-size: 1.7rem;
       max-width: 450px;
     }
+  }
+
+  a {
+      color: #ec9345;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline;
   }
 </style>
